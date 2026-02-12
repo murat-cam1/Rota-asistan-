@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+🏝️ Antalya Rota Asistanı (Full-Stack)
+Antalya'yı keşfetmek isteyenler için geliştirilmiş; Yapay Zeka (AI) destekli, anlık Hava Durumu entegrasyonlu ve dinamik rota oluşturma özellikli modern bir web rehberi.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bu proje, turistlerin Tarih, Doğa, Eğlence, Dalış, Tekne ve Yemek kategorilerinde en iyi mekanları bulmasını, kişisel favori listelerini oluşturmasını ve Google Gemini AI sayesinde o anki hava durumuna göre kişiselleştirilmiş gezi tavsiyeleri almasını sağlar.
 
-## Available Scripts
+🚀 Özellikler
+🗺️ Kategori Bazlı Keşif: Tarihi yerlerden gizli koylara, restoranlardan dalış noktalarına kadar 6 farklı kategoride filtreleme.
 
-In the project directory, you can run:
+🤖 AI Destekli Rehber (Gemini): "AI İpucu" butonu ile mekanın o anki hava durumunu analiz eder ve turist rehberi ağzıyla size özel tavsiye verir.
 
-### `npm start`
+☀️ Gerçek Zamanlı Hava Durumu: OpenWeatherMap API kullanılarak her mekanın anlık sıcaklık ve durum bilgisi çekilir.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+❤️ Favoriler ve Rota Çizme: Beğendiğiniz mekanları listeye ekleyip, tek tıkla Google Maps üzerinde optimize edilmiş rota oluşturabilirsiniz.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+💳 Dinamik Fiyatlandırma: "Müzekart Var/Yok" seçeneği ile giriş ücretlerini anında günceller.
 
-### `npm test`
+💬 Gerçek Yorumlar: Yemek mekanları için doğrudan Google Maps yorumlarına giden hızlı bağlantılar.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+📱 Modern Arayüz: Oval butonlar, yumuşak geçişler (smooth scroll) ve duyarlı (responsive) tasarım.
 
-### `npm run build`
+🛠️ Kullanılan Teknolojiler
+Frontend (İstemci)
+React.js: Bileşen tabanlı modern UI.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Google Generative AI SDK: Gemini modeline bağlanmak için.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+CSS3: Flexbox/Grid yapısı, Backdrop-filter efektleri ve Smooth Scroll.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Backend (Sunucu)
+Node.js & Express.js: REST API yapısı.
 
-### `npm run eject`
+Axios: Harici API (OpenWeather) istekleri için.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Dotenv: API anahtarlarını güvenli saklamak için.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+CORS: Frontend ve Backend arası güvenli iletişim.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+⚙️ Kurulum ve Çalıştırma
+Projeyi yerel bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyin.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Projeyi Klonlayın
+Bash
+git clone https://github.com/KULLANICI_ADIN/antalya-rota-asistani.git
+cd antalya-rota-asistani
+2. Backend (Sunucu) Kurulumu
+Backend klasörüne gidin, paketleri yükleyin ve sunucuyu başlatın.
 
-## Learn More
+Bash
+cd backend
+npm install
+⚠️ Önemli: backend klasörü içinde .env adında bir dosya oluşturun ve içine OpenWeatherMap API anahtarınızı ekleyin:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Kod snippet'i
+WEATHER_API_KEY=senin_openweathermap_api_keyin
+Sunucuyu başlatın:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Bash
+node server.js
+(Backend http://localhost:5000 adresinde çalışacaktır.)
 
-### Code Splitting
+3. Frontend (Arayüz) Kurulumu
+Yeni bir terminal açın, frontend klasörüne gidin ve paketleri yükleyin.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Bash
+cd ../frontend
+npm install
+⚠️ Önemli: frontend klasörü içinde .env adında bir dosya oluşturun ve Google Gemini API anahtarınızı ekleyin:
 
-### Analyzing the Bundle Size
+Kod snippet'i
+REACT_APP_GEMINI_KEY=senin_gemini_api_keyin
+Uygulamayı başlatın:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Bash
+npm start
+(Uygulama http://localhost:3000 adresinde açılacaktır.)
 
-### Making a Progressive Web App
+📸 Ekran Görüntüleri
+(Buraya uygulamanın ekran görüntülerini ekleyebilirsin. Örneğin: ![Uygulama Ana Sayfa](./screenshots/home.png))
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+📂 Proje Yapısı
+Plaintext
+Antalya-Rota-Asistani/
+├── backend/
+│   ├── server.js        # API endpointleri ve sunucu ayarları
+│   ├── .env             # Hava durumu API anahtarı (Gizli)
+│   └── package.json
+│
+└── frontend/
+    ├── public/
+    ├── src/
+    │   ├── App.js       # Ana uygulama mantığı ve UI
+    │   └── index.js
+    ├── .env             # Gemini AI API anahtarı (Gizli)
+    └── package.json
+🤝 Katkıda Bulunma
+Bu repoyu Fork'layın.
 
-### Advanced Configuration
+Yeni bir özellik dalı (branch) oluşturun (git checkout -b yeni-ozellik).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Değişikliklerinizi Commit edin (git commit -m 'Yeni özellik eklendi').
 
-### Deployment
+Branch'inizi Push edin (git push origin yeni-ozellik).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Bir Pull Request oluşturun.
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📄 Lisans
+Bu proje MIT lisansı ile lisanslanmıştır.
